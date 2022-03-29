@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Contact {
     private String nombre, email, telefono;
     private static ArrayList<Contact> contactos = new ArrayList<Contact>();
-   
+    private static final int MAX_CONTACT;
+
     public Contact(String nombre, String email, String telefono) {
         this.nombre = nombre;
         this.email = email;
@@ -66,7 +67,7 @@ public class Contact {
         
         }
 
-        if (contactos.size() >= 256) {
+        if (contactos.size() >= MAX_CONTACT) {
             System.out.println("El contacto no puede ser creado, ya hay muchos en el sistema");
         }else{
             contactos.add(new Contact(nombre, email,telefono));
