@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Contact {
     private String nombre, email, telefono;
     private static ArrayList<Contact> contactos = new ArrayList<Contact>();
-    private static final int MAX_CONTACT;
+    private static final int MAX_CONTACT = 256;
 
     public Contact(String nombre, String email, String telefono) {
         this.nombre = nombre;
