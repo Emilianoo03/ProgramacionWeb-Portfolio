@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 
-public class App {
-    private static Scanner tec = new Scanner(System.in);
-    private static String nombre,email, telefono;
-
+public class App { // la llamaria Agenda, es muy generico App.
+    // no es necesario polucionar la clase con variable que puden ser locales
     public static void main(String[] args) throws Exception {
+        Scanner tec = new Scanner(System.in);
+
         boolean salir = false;
-         String opc;
-         while (!salir) {
+        while (!salir) { // divino
+             String opc;
              System.out.println("1- Ingresar un nuevo contacto");
              System.out.println("2- Buscar un contacto existente");
              System.out.println("3- Salir");
@@ -17,9 +17,14 @@ public class App {
              opc = tec.nextLine();
              switch (opc) {
                  case "1":
+                        String nombre,email, telefono;
                         System.out.println("Ingrese el nombre del contacto: ");
-                        nombre = tec.nextLine();
+                        // podrias usar esto para asegurar que el nombre no sea vacio
+                        do {
+                          nombre = tec.nextLine();
+                        } while (nombre.isEmpty());
 
+                        // igual con el telefono
                         System.out.println("Ingrese el telefono del contacto: ");
                         telefono = tec.nextLine();
 
@@ -29,6 +34,7 @@ public class App {
                      break;
                  case "2":
                     System.out.println("Ingrese el nombre del contacto: ");
+                    // idem el nombre que definis en el case anterior
                     String busqueda = tec.nextLine();
                     Contact.Search(busqueda);
                      break;
