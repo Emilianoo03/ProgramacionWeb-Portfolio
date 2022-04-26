@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// funcionaria, pero llevar la lista de contactos parece 
+// ser una responsabilidad de la App (agenda). Tenes que pensar
+// que es contacto y asignar las responabilidades y scope de cada clase
+
 public class Contact {
     private String nombre, email, telefono;
     private static ArrayList<Contact> contactos = new ArrayList<Contact>();
@@ -39,7 +43,7 @@ public class Contact {
 
     public static void Search(String busqueda) {
 
-        for (Contact contacto: contactos) {
+        for (Contact contacto: contactos) { // perfecto
 
             if (contacto.getNombre().equals(busqueda)) {
                 System.out.println("- Nombre: " + contacto.getNombre());
