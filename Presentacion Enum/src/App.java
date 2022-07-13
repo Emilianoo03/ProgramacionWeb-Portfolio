@@ -8,7 +8,6 @@ public class App {
         System.out.println(psg.getNombreClub());
         System.out.println(psg.getPuestoLiga());
 
-
         Futbolista neymar = new Futbolista("Neymar", 11, Demarcacion.DELANTERO, Equipo.PSG);
 
         System.out.println(neymar);
