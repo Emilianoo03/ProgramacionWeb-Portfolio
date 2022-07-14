@@ -1,4 +1,4 @@
-package com.contactosapi.api;
+package com.apicontacts.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
